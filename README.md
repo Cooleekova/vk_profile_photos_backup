@@ -1,24 +1,23 @@
 ## App for backup profile photos from social net [vk.com](https://vk.com/) to the cloud storage [Yandex.Disk](https://disk.yandex.com/)  
 
-Возможна такая ситуация, что мы хотим показать друзьям фотографии, но соц. сети могут быть недоступны по каким-либо причинам. Давайте защитимся от такого. 
+The app saves VK user's profile photos to the Yandex Disk specified by the user.
 
-Приложение сохраняет фотографии профиля пользователя VK на Яндекс Диск, указанный пользователем.
+The number of likes is used for photo titles, and if number of likes is the same, then it uses number of likes and upload date.
 
-Для названий фотографий используется количество лайков, если количество лайков одинаково, то добавляется дата загрузки.  
-Информация o загруженных фотографиях сохраняется в json-файл.
+Information about uploaded photos is being saved in a json file.
 
-### Как работает программа: 
+### How it works: 
 
-**Пользователь вводит:**
-1. id пользователя vk;
-2. токен с [Полигона Яндекс.Диска](https://yandex.ru/dev/disk/poligon/).
+**User enters:**
+1. user id in VK;
+2. personal token from [Yandex.Disk Polygon](https://yandex.ru/dev/disk/poligon/).
 
-**Выходные данные:**
-1. json-файл с информацией о загруженных фотографиях:
+**Output:**
+1. Photos added to Yandex.Disk.
+2. Json file with information about uploaded photos in following format:
 ```
-    [{
-    "file_name": "34.jpg",
-    "size": "z"
-    }]
+      [{
+      "filename": "34.jpg",
+      "size": "g"
+      }]
 ```
-2. Измененный Я.диск, куда добавились фотографии.
